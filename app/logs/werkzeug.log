@@ -21,3 +21,25 @@
 2022-04-24 22:10:33,268 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:10:33] "[32mPOST /register HTTP/1.1[0m" 302 -
 2022-04-24 22:10:33,282 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:10:33] "[32mGET /login HTTP/1.1[0m" 302 -
 2022-04-24 22:10:33,304 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:10:33] "GET /dashboard HTTP/1.1" 200 -
+2022-04-24 22:29:59,041 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:29:59] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2022-04-24 22:29:59,063 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:29:59] "GET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-04-24 22:29:59,066 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:29:59] "GET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-04-24 22:29:59,088 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:29:59] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-04-24 22:29:59,110 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:29:59] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-24 22:30:53,827 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:30:53] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2022-04-24 22:30:53,853 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:30:53] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-04-24 22:30:53,855 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:30:53] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-04-24 22:30:53,878 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:30:53] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-24 22:30:53,899 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:30:53] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-24 22:32:12,639 [INFO] werkzeug:  * Detected change in '/home/myuser/app/__init__.py', reloading
+2022-04-24 22:32:24,826 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:24] "GET /dashboard HTTP/1.1" 200 -
+2022-04-24 22:32:26,048 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:26] "GET /songs HTTP/1.1" 200 -
+2022-04-24 22:32:26,950 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:26] "GET /dashboard HTTP/1.1" 200 -
+2022-04-24 22:32:27,425 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:27] "GET /songs HTTP/1.1" 200 -
+2022-04-24 22:32:27,931 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:27] "GET /users HTTP/1.1" 200 -
+2022-04-24 22:32:27,975 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:27] "[36mGET /bootstrap/static/icons/bootstrap-icons.svg HTTP/1.1[0m" 304 -
+2022-04-24 22:32:28,387 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:28] "GET /welcome HTTP/1.1" 200 -
+2022-04-24 22:32:29,795 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:29] "[32mGET /logout HTTP/1.1[0m" 302 -
+2022-04-24 22:32:29,818 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:29] "GET /login HTTP/1.1" 200 -
+2022-04-24 22:32:34,234 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-24 22:32:34,256 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:34] "GET /dashboard HTTP/1.1" 200 -
