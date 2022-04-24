@@ -49,3 +49,17 @@
 2022-04-24 22:35:00,262 [INFO] werkzeug:  * Detected change in '/home/myuser/app/songs/__init__.py', reloading
 2022-04-24 22:35:01,128 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:35:01] "GET /songs HTTP/1.1" 200 -
 2022-04-24 22:35:53,928 [INFO] werkzeug:  * Detected change in '/home/myuser/app/songs/__init__.py', reloading
+2022-04-24 22:57:20,748 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:57:20] "GET /songs HTTP/1.1" 200 -
+2022-04-24 22:58:02,728 [INFO] werkzeug:  * Detected change in '/home/myuser/app/songs/__init__.py', reloading
+2022-04-24 23:00:15,800 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:00:15] "[35m[1mPOST /songs HTTP/1.1[0m" 500 -
+2022-04-24 23:00:15,816 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:00:15] "GET /songs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-04-24 23:00:15,818 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:00:15] "GET /songs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-04-24 23:00:15,834 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:00:15] "GET /songs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-04-24 23:00:15,848 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:00:15] "[36mGET /songs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-24 23:02:07,949 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:02:07] "[35m[1mPOST /songs HTTP/1.1[0m" 500 -
+2022-04-24 23:02:07,970 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:02:07] "[36mGET /songs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-04-24 23:02:07,973 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:02:07] "[36mGET /songs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-04-24 23:02:07,984 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:02:07] "[36mGET /songs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-24 23:02:07,999 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:02:07] "[36mGET /songs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-24 23:04:38,532 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:04:38] "POST /songs HTTP/1.1" 200 -
+2022-04-24 23:04:47,533 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 23:04:47] "POST /songs HTTP/1.1" 200 -
