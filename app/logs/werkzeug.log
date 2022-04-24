@@ -48,3 +48,4 @@
 2022-04-24 22:34:46,322 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:34:46] "GET /songs HTTP/1.1" 200 -
 2022-04-24 22:35:00,262 [INFO] werkzeug:  * Detected change in '/home/myuser/app/songs/__init__.py', reloading
 2022-04-24 22:35:01,128 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:35:01] "GET /songs HTTP/1.1" 200 -
+2022-04-24 22:35:53,928 [INFO] werkzeug:  * Detected change in '/home/myuser/app/songs/__init__.py', reloading
