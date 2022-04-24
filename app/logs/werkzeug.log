@@ -43,3 +43,8 @@
 2022-04-24 22:32:29,818 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:29] "GET /login HTTP/1.1" 200 -
 2022-04-24 22:32:34,234 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:34] "[32mPOST /login HTTP/1.1[0m" 302 -
 2022-04-24 22:32:34,256 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:32:34] "GET /dashboard HTTP/1.1" 200 -
+2022-04-24 22:33:54,001 [INFO] werkzeug:  * Detected change in '/home/myuser/app/songs/__init__.py', reloading
+2022-04-24 22:34:44,607 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:34:44] "GET /dashboard HTTP/1.1" 200 -
+2022-04-24 22:34:46,322 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:34:46] "GET /songs HTTP/1.1" 200 -
+2022-04-24 22:35:00,262 [INFO] werkzeug:  * Detected change in '/home/myuser/app/songs/__init__.py', reloading
+2022-04-24 22:35:01,128 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:35:01] "GET /songs HTTP/1.1" 200 -
