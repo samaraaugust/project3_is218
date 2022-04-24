@@ -11,3 +11,13 @@
 2022-04-24 21:40:01,122 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 21:40:01] "GET /login HTTP/1.1" 200 -
 2022-04-24 21:40:05,791 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 21:40:05] "[32mPOST /login HTTP/1.1[0m" 302 -
 2022-04-24 21:40:05,811 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 21:40:05] "GET /dashboard HTTP/1.1" 200 -
+2022-04-24 22:08:09,944 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:08:09] "GET /dashboard HTTP/1.1" 200 -
+2022-04-24 22:08:23,939 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:08:23] "GET /about HTTP/1.1" 200 -
+2022-04-24 22:08:25,685 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:08:25] "GET /dashboard HTTP/1.1" 200 -
+2022-04-24 22:09:01,839 [INFO] werkzeug:  * Detected change in '/home/myuser/app/db/models/__init__.py', reloading
+2022-04-24 22:10:13,743 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:10:13] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2022-04-24 22:10:13,874 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:10:13] "GET /login?next=%2Fdashboard HTTP/1.1" 200 -
+2022-04-24 22:10:16,570 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:10:16] "GET /register HTTP/1.1" 200 -
+2022-04-24 22:10:33,268 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:10:33] "[32mPOST /register HTTP/1.1[0m" 302 -
+2022-04-24 22:10:33,282 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:10:33] "[32mGET /login HTTP/1.1[0m" 302 -
+2022-04-24 22:10:33,304 [INFO] werkzeug: 172.20.0.1 - - [24/Apr/2022 22:10:33] "GET /dashboard HTTP/1.1" 200 -
