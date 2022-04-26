@@ -165,3 +165,14 @@
 2022-04-26 14:04:27,594 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:04:27] "GET /welcome HTTP/1.1" 200 -
 2022-04-26 14:04:28,432 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:04:28] "GET / HTTP/1.1" 200 -
 2022-04-26 14:20:04,767 [INFO] werkzeug:  * Detected change in '/home/myuser/tests/click_test.py', reloading
+2022-04-26 14:34:10,561 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:34:10] "GET / HTTP/1.1" 200 -
+2022-04-26 14:34:15,959 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:34:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-26 14:34:16,017 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:34:16] "GET /dashboard HTTP/1.1" 200 -
+2022-04-26 14:34:18,418 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:34:18] "GET /songs HTTP/1.1" 200 -
+2022-04-26 14:34:23,532 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:34:23] "[35m[1mPOST /songs HTTP/1.1[0m" 500 -
+2022-04-26 14:34:23,558 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:34:23] "GET /songs?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-04-26 14:34:23,559 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:34:23] "GET /songs?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-04-26 14:34:23,579 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:34:23] "[36mGET /songs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-26 14:34:23,638 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:34:23] "[36mGET /songs?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-26 14:34:31,832 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:34:31] "[32mPOST /songs HTTP/1.1[0m" 302 -
+2022-04-26 14:34:32,230 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:34:32] "GET /songs_tables/ HTTP/1.1" 200 -
