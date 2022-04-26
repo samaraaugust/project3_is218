@@ -157,3 +157,11 @@
 2022-04-25 00:12:21,441 [INFO] werkzeug: 172.20.0.1 - - [25/Apr/2022 00:12:21] "[36mGET /bootstrap/static/icons/bootstrap-icons.svg HTTP/1.1[0m" 304 -
 2022-04-25 00:12:22,411 [INFO] werkzeug: 172.20.0.1 - - [25/Apr/2022 00:12:22] "GET /songs_tables/ HTTP/1.1" 200 -
 2022-04-25 00:12:32,959 [INFO] werkzeug: 172.20.0.1 - - [25/Apr/2022 00:12:32] "GET /dashboard HTTP/1.1" 200 -
+2022-04-25 00:29:26,934 [INFO] werkzeug: 172.20.0.1 - - [25/Apr/2022 00:29:26] "GET /songs HTTP/1.1" 200 -
+2022-04-25 00:29:33,320 [INFO] werkzeug: 172.20.0.1 - - [25/Apr/2022 00:29:33] "[32mPOST /songs HTTP/1.1[0m" 302 -
+2022-04-25 00:29:33,478 [INFO] werkzeug: 172.20.0.1 - - [25/Apr/2022 00:29:33] "GET /songs_tables/ HTTP/1.1" 200 -
+2022-04-26 14:04:25,817 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:04:25] "GET / HTTP/1.1" 200 -
+2022-04-26 14:04:27,061 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:04:27] "GET /about HTTP/1.1" 200 -
+2022-04-26 14:04:27,594 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:04:27] "GET /welcome HTTP/1.1" 200 -
+2022-04-26 14:04:28,432 [INFO] werkzeug: 172.20.0.1 - - [26/Apr/2022 14:04:28] "GET / HTTP/1.1" 200 -
+2022-04-26 14:20:04,767 [INFO] werkzeug:  * Detected change in '/home/myuser/tests/click_test.py', reloading
