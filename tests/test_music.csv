@@ -1,0 +1,5 @@
+Name,Artist,Composer,Album,Grouping,Work,Movement Number,Movement Count,Movement Name,Genre,Size,Time,Disc Number,Disc Count,Track Number,Track Count,Year,Date Modified,Date Added,Bit Rate,Sample Rate,Volume Adjustment,Kind,Equalizer,Comments,Plays,Last Played,Skips,Last Skipped,My Rating,Location
+test 1,test1a,tests1c,tes1a,,,,,,Electronic,7074649,197,1,1,1,11,2016,"2/28/17, 1:39 PM","2/28/17, 1:39 PM",256,44100,,Apple Music AAC audio file,,,247,"9/6/21, 3:09 PM",5,"1/20/21, 9:10 PM",,
+test 2,test2a,tests2c,tes1a,,,,,,Dance,7860306,219,1,1,2,15,2015,"3/5/17, 12:45 AM","3/5/17, 12:45 AM",256,44100,,Apple Music AAC audio file,,,246,"9/6/21, 3:12 PM",2,"11/23/20, 4:42 PM",,
+test 3,test3a,tests3c,tes1a,,,,,,Dance,,189,1,1,1,13,2014,"5/28/15, 2:59 PM","5/28/15, 2:59 PM",256,44100,,Purchased AAC audio file,,,237,"9/6/21, 3:16 PM",1,"12/14/18, 2:12 AM",,
+test 4,test4a,tests4c,tes1a,,,,,,Dance,7696837,217,1,1,7,13,2014,"3/5/17, 6:28 PM","3/5/17, 6:28 PM",256,44100,,Apple Music AAC audio file,,,226,"9/6/21, 3:19 PM",2,"2/12/20, 4:04 PM",,

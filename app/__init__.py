@@ -37,6 +37,7 @@ def create_app():
     # Needed for CSRF protection of form submissions and WTF Forms
     # https://wtforms.readthedocs.io/en/3.0.x/
     csrf = CSRFProtect(app)
+    app.config['WTF_CSRF_ENABLED'] = False
     # https://bootstrap-flask.readthedocs.io/en/stable/
     bootstrap = Bootstrap5(app)
     # these load functions with web interface

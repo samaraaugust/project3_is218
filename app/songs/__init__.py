@@ -7,7 +7,7 @@ from app.db.models import Song
 from app.songs.forms import csv_upload
 from werkzeug.utils import secure_filename, redirect
 from jinja2 import TemplateNotFound
-from flask_login import current_user
+from flask_login import current_user, login_required
 
 songs = Blueprint('songs', __name__,
                         template_folder='templates')
@@ -24,7 +24,7 @@ def songs_browse(page):
     except TemplateNotFound:
         abort(404)
 """
-@songs.route('/songs_tables/', methods=['GET'])
+@songs.route('/songs_tables', methods=['GET'])
 def browse_all_songs():
     data = Song.query.all()
     try:
@@ -33,6 +33,7 @@ def browse_all_songs():
         abort(404)
 
 @songs.route('/songs', methods=['POST', 'GET'])
+@login_required
 def upload_playlist():
     form = csv_upload()
     if form.validate_on_submit():

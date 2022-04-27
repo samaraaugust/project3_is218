@@ -3,7 +3,8 @@ from logging.config import dictConfig
 
 import flask
 from flask import request, current_app
-
+from app import config
+import os
 from app.logging_config.log_formatters import RequestFormatter
 
 log_con = flask.Blueprint('log_con', __name__)
@@ -37,9 +38,19 @@ def configure_logging():
     log = logging.getLogger("myApp")
     log.info("My App Logger")
     log = logging.getLogger("myerrors")
-    log.info("THis broke")
+    log.info("error")
+    log = logging.getLogger("request")
+    log.info("Request")
 
+@log_con.before_app_first_request
+def setup_logs():
 
+    # set the name of the apps log folder to logs
+    logdir = config.Config.LOG_DIR
+    # make a directory if it doesn't exist
+    if not os.path.exists(logdir):
+        os.mkdir(logdir)
+    logging.config.dictConfig(LOGGING_CONFIG)
 
 
 LOGGING_CONFIG = {
@@ -52,7 +63,7 @@ LOGGING_CONFIG = {
         'RequestFormatter': {
             '()': 'app.logging_config.log_formatters.RequestFormatter',
             'format': '[%(asctime)s] [%(process)d] %(remote_addr)s requested %(url)s'
-                        '%(levelname)s in %(module)s: %(message)s'
+                         ' %(levelname)s in %(module)s: %(message)s'
         }
     },
     'handlers': {
@@ -133,9 +144,13 @@ LOGGING_CONFIG = {
         },
         'myerrors': {  # if __name__ == '__main__'
             'handlers': ['file.handler.errors'],
-            'level': 'DEBUG',
+            'level': 'ERROR',
             'propagate': False
         },
-
+        'request': {
+            'handlers': ['file.handler.request'],
+            'level': 'INFO',
+            'propagate': False
+        },
     }
 }

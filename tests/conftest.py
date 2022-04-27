@@ -27,3 +27,19 @@ def client(application):
 def runner(application):
     """This makes the task runner"""
     return application.test_cli_runner()
+
+class AuthActions:
+    def __init__(self, client):
+        self._client = client
+
+    def login(self, email="test@email.com", password="tester1"):
+        return self._client.post(
+            "/login", data={"email": email, "password": password}
+        )
+
+    def logout(self):
+        return self._client.get("/logout")
+
+@pytest.fixture
+def auth(client):
+    return AuthActions(client)
