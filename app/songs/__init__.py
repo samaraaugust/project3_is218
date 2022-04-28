@@ -25,6 +25,7 @@ def songs_browse(page):
         abort(404)
 """
 @songs.route('/songs_tables', methods=['GET'])
+@login_required
 def browse_all_songs():
     data = Song.query.all()
     try:

@@ -2,7 +2,7 @@ import os
 
 from click.testing import CliRunner
 
-from app import create_log_folder, create_database
+from app import create_log_folder, create_database, create_uploads_folder
 
 runner = CliRunner()
 
@@ -26,3 +26,12 @@ def test_create_database():
     dbdir = os.path.join(root, '../database')
     # make a directory if it doesn't exist
     assert os.path.exists(dbdir) == True
+
+def test_create_uploads():
+    response = runner.invoke(create_uploads_folder)
+    assert response.exit_code == 0
+    root = os.path.dirname(os.path.abspath(__file__))
+    # set the name of the apps log folder to logs
+    updir = os.path.join(root, '../uploads')
+    # make a directory if it doesn't exist
+    assert os.path.exists(updir) == True

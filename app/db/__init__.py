@@ -15,6 +15,7 @@ def init_db():
 
 @database.before_app_first_request
 def create_db_file_if_does_not_exist():
+    print("in here")
     root = config.Config.BASE_DIR
     # set the name of the apps log folder to logs
     dbdir = os.path.join(root, '..', config.Config.DB_DIR)
@@ -28,7 +29,7 @@ def create_db_file_if_does_not_exist():
 def create_upload_folder():
     root = config.Config.BASE_DIR
     # set the name of the apps log folder to logs
-    uploadfolder = os.path.join(root, '..', config.Config.UPLOAD_FOLDER)
+    uploadfolder = os.path.join(root,'..',config.Config.UPLOAD_FOLDER)
     # make a directory if it doesn't exist
     if not os.path.exists(uploadfolder):
         os.mkdir(uploadfolder)

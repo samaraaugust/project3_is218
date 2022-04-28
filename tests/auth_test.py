@@ -16,21 +16,36 @@ def test_auth_pages(client):
     response = client.get("/login")
     assert response.status_code == 200
 
+def test_successful_register(client, auth):
+    """Successful register redirects to the login"""
+    #add_user
+    #response = client.post("/login", data={"email": "test@email.com", "password": "tester"})
+    #assert response.get("/login").status_code == 100
+    #assert client.get("/login").status_code == 200
+    response = auth.register()
+    assert response.headers["Location"] == "/login"
+
 def test_successful_login(client, auth):
     """Successful login redirects to the dashboard"""
-    assert client.get("/login").status_code == 200
+    #add_user
+    #response = client.post("/login", data={"email": "test@email.com", "password": "tester"})
+    #assert response.get("/login").status_code == 100
+    #assert client.get("/login").status_code == 200
+    respone2 = auth.register()
     response = auth.login()
     assert response.headers["Location"] == "/dashboard"
-
+"""
 def test_successful_registration(client):
-    """Successful registration redirects to login page"""
+    #Successful registration redirects to login page
     assert client.get("/register").status_code == 200
     response = client.post("/register", data={"email": "first2@email.com", "password": "tester", "confirm": "tester"})
     assert response.headers["Location"] == "/login"
-
-def test_dashboard_logged_in(client):
+"""
+def test_dashboard_logged_in(client, auth):
     """If user is logged in can access dashboard page"""
-    response = client.post("/login", data={"email": "test@email.com", "password": "tester1"})
+    #response = client.post("/login", data={"email": "test@email.com", "password": "tester1"})
+    response1 = auth.register()
+    response3 = auth.login()
     response2 = client.get("/dashboard")
     assert b"Welcome: test@email.com" in response2.data
     assert b"Dashboard" in response2.data

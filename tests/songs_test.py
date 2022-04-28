@@ -1,7 +1,9 @@
 
 
-def test_csv_upload(client):
-    response = client.post("/login", data={"email": "test@email.com", "password": "tester1"})
+def test_csv_upload(client, auth):
+    #response = client.post("/login", data={"email": "test@email.com", "password": "tester1"})
+    response1 = auth.register()
+    response3 = auth.login()
     csv = "tests/test_music.csv"
     csv_data = open(csv, "rb")
     data = {"file": (csv_data, "test_music.csv")}
