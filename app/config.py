@@ -13,8 +13,12 @@ class Config(object):
     #db_dir = "database/db.sqlite"
     #SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.abspath(db_dir)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER', BASE_DIR + '/uploads')
-
+    #UPLOAD_FOLDER = os.path.join(BASE_DIR, '..', 'uploads')
+    UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER', os.path.join(BASE_DIR, '..', 'uploads'))
+    #UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER', BASE_DIR + '/uploads')
+    #UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER', BASE_DIR + '..' + '/uploads')
+    #add two ".."
+    LOG_DIR = os.path.join(BASE_DIR, '../logs')
 
 class ProductionConfig(Config):
     pass
@@ -27,4 +31,6 @@ class DevelopmentConfig(Config):
 
 class TestingConfig(Config):
     TESTING = True
+    SQLALCHEMY_DATABASE_URI = "sqlite:///:memory:"
     SESSION_COOKIE_SECURE = False
+    DEBUG = True
