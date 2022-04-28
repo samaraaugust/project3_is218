@@ -15,7 +15,6 @@ def init_db():
 
 @database.before_app_first_request
 def create_db_file_if_does_not_exist():
-    print("in here")
     root = config.Config.BASE_DIR
     # set the name of the apps log folder to logs
     dbdir = os.path.join(root, '..', config.Config.DB_DIR)

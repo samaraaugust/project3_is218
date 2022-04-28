@@ -17,7 +17,7 @@ def create_database():
         os.mkdir(dbdir)
     db.create_all()
 
-
+"""
 @click.command(name='create-log-folder')
 @with_appcontext
 def create_log_folder():
@@ -40,3 +40,4 @@ def create_uploads_folder():
     if not os.path.exists(uploadfolder):
         os.mkdir(uploadfolder)
     db.create_all()
+"""
