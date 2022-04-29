@@ -63,7 +63,8 @@ LOGGING_CONFIG = {
     'RequestFormatter': {
             '()': 'app.logging_config.log_formatters.RequestFormatter',
             'format': '[%(asctime)s] [%(process)d] %(remote_addr)s requested %(url)s'
-                      ' %(levelname)s in %(module)s: %(message)s'
+                      ' %(levelname)s in %(module)s: %(message)s  Method: [%(request_method)s] Route: [%(request_path)s]'
+                      ' Host: [%(host)s]'
         }
     },
     'handlers': {
