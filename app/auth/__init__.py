@@ -12,6 +12,8 @@ auth = Blueprint('auth', __name__, template_folder='templates')
 
 @auth.route('/register', methods=['POST', 'GET'])
 def register():
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: register")
     if current_user.is_authenticated:
         return redirect(url_for('auth.dashboard'))
     form = register_form()
@@ -34,6 +36,8 @@ def register():
 
 @auth.route('/login', methods=['POST', 'GET'])
 def login():
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: login")
     form = login_form()
     if current_user.is_authenticated:
         return redirect(url_for('auth.dashboard'))
@@ -55,6 +59,8 @@ def login():
 @login_required
 def logout():
     """Logout the current user."""
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: logout")
     user = current_user
     user.authenticated = False
     db.session.add(user)
@@ -67,11 +73,15 @@ def logout():
 @auth.route('/dashboard')
 @login_required
 def dashboard():
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: dashboard")
     return render_template('dashboard.html')
 
 
 @auth.route('/profile', methods=['POST', 'GET'])
 def edit_profile():
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: edit_profile")
     user = User.query.get(current_user.get_id())
     form = profile_form(obj=user)
     if form.validate_on_submit():
@@ -85,6 +95,8 @@ def edit_profile():
 
 @auth.route('/account', methods=['POST', 'GET'])
 def edit_account():
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: edit_account")
     user = User.query.get(current_user.get_id())
     form = security_form(obj=user)
     if form.validate_on_submit():
@@ -104,6 +116,8 @@ def edit_account():
 @login_required
 @admin_required
 def browse_users():
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: browse_users")
     data = User.query.all()
     titles = [('email', 'Email'), ('registered_on', 'Registered On')]
     retrieve_url = ('auth.retrieve_user', [('user_id', ':id')])
@@ -120,6 +134,8 @@ def browse_users():
 @auth.route('/users/<int:user_id>')
 @login_required
 def retrieve_user(user_id):
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: retrieve_user")
     user = User.query.get(user_id)
     return render_template('profile_view.html', user=user)
 
@@ -127,6 +143,8 @@ def retrieve_user(user_id):
 @auth.route('/users/<int:user_id>/edit', methods=['POST', 'GET'])
 @login_required
 def edit_user(user_id):
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: edit_user")
     user = User.query.get(user_id)
     form = user_edit_form(obj=user)
     if form.validate_on_submit():
@@ -143,6 +161,8 @@ def edit_user(user_id):
 @auth.route('/users/new', methods=['POST', 'GET'])
 @login_required
 def add_user():
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: add_user")
     form = register_form()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
@@ -161,6 +181,8 @@ def add_user():
 @auth.route('/users/<int:user_id>/delete', methods=['POST'])
 @login_required
 def delete_user(user_id):
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: delete_user")
     user = User.query.get(user_id)
     if user.id == current_user.id:
         flash("You can't delete yourself!")
