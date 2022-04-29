@@ -50,8 +50,7 @@ def configure_logging():
     log.info("My App Logger")
     log = logging.getLogger("myerrors")
     log.info("error")
-    log = logging.getLogger("request")
-    log.info("Request")
+
 
 
 LOGGING_CONFIG = {

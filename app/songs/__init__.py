@@ -16,6 +16,8 @@ songs = Blueprint('songs', __name__,
 @login_required
 def browse_all_songs():
     data = Song.query.all()
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: browse_all_songs")
     try:
         return render_template('browse_songs.html', data=data)
     except TemplateNotFound:
@@ -24,11 +26,12 @@ def browse_all_songs():
 @songs.route('/songs', methods=['POST', 'GET'])
 @login_required
 def upload_playlist():
+    log3 = logging.getLogger("request")
+    log3.info("Request Method: upload_playlist")
     form = csv_upload()
     if form.validate_on_submit():
         log = logging.getLogger("myApp")
         log2 = logging.getLogger("csv")
-
         filename = secure_filename(form.file.data.filename)
         log2.info("CSV Uploaded: " + filename)
         filepath = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
