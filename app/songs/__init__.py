@@ -11,19 +11,7 @@ from flask_login import current_user, login_required
 
 songs = Blueprint('songs', __name__,
                         template_folder='templates')
-"""
-#@songs.route('/songs', methods=['GET'], defaults={"page": 1})
-@songs.route('/songs/<int:page>', methods=['GET'])
-def songs_browse(page):
-    page = page
-    per_page = 10
-    pagination = Song.query.paginate(page, per_page, error_out=False)
-    data = pagination.items
-    try:
-        return render_template('browse_songs.html',data=data,pagination=pagination)
-    except TemplateNotFound:
-        abort(404)
-"""
+
 @songs.route('/songs_tables', methods=['GET'])
 @login_required
 def browse_all_songs():
@@ -39,7 +27,10 @@ def upload_playlist():
     form = csv_upload()
     if form.validate_on_submit():
         log = logging.getLogger("myApp")
+        log2 = logging.getLogger("csv")
+
         filename = secure_filename(form.file.data.filename)
+        log2.info("CSV Uploaded: " + filename)
         filepath = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
         form.file.data.save(filepath)
         songsL = []
